@@ -7,12 +7,19 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SampleCodeSpringBootApplication implements CommandLineRunner {
 
+	private final UserService userService;
+
 	public static void main(String[] args) {
 		SpringApplication.run(SampleCodeSpringBootApplication.class, args);
 	}
-    UserService userService=new UserService(new MySqlDatabase());
+
+	public SampleCodeSpringBootApplication(UserService userService)
+	{
+		this.userService=userService;
+	}
+
 	@Override
 	public void run(String... args) throws Exception {
-		userService.saveUser("Ankit is saving the value");
+           userService.saveUser("Ankit is press the button");
 	}
 }
