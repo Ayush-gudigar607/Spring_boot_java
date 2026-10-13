@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 //@Profile("dev")
 @Component
 @ConditionalOnProperty(name="db.type",havingValue="mysql")
+
+
 public class MySqlDatabase implements DataBase {
 
     @Override
