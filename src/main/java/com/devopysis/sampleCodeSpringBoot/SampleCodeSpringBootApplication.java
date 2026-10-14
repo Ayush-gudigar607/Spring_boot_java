@@ -8,6 +8,8 @@ public class SampleCodeSpringBootApplication implements CommandLineRunner {
     //userservice dependency This declares a variable that holds a reference to the UserService object.The service usually contains business logic
 	private final UserService userService;
 
+
+
 	public static void main(String[] args) {
 		SpringApplication.run(SampleCodeSpringBootApplication.class, args);
 	}
@@ -18,7 +20,7 @@ public class SampleCodeSpringBootApplication implements CommandLineRunner {
 		this.userService=userService;
 	}
 
-
+   //a run method to run the userservice its a method of commandlinerunner()
 	@Override
 	public void run(String... args) throws Exception {
 		userService.saveUser("Ankit is saving user");
